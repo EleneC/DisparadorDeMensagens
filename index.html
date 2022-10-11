@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Disparador de Mensagens</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+      div {
+        background-color: #daf7c1;
+        width: 320px;
+        margin: 8px;
+        padding: 8px 18px;
+        border-radius: 14px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      div:hover {
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: url("https://i.pinimg.com/originals/62/40/b6/6240b66d5c50c8661eee78b439a7d33c.jpg");
+        font-family: "Source Serif Pro", serif;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="enviaZap(this)">
+      <p>Fiquem atentos, em breve novas informações.</p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+
+    <div onclick="enviaZap(this)">
+      <p>Bom dia, passando para lembrar da reuniao mais tarde!</p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+
+    <div onclick="enviaZap(this)">
+      <p>Boa tarde, passando para lembrar da reuniao em instantes!</p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+
+    <div onclick="enviaZap(this)">
+      <p>
+        Agradeço a todos pela participação em nosso debate sobre o novo site.
+      </p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+
+    <div onclick="enviaZap(this)">
+      <p></p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+
+    <div onclick="enviaZap(this)">
+      <p>Ter mais dinheiro no bolso pode ajudar hoje?🤑 Ligue (24)992166246 whats (24)992166246. Em parceria com uma empresa que trabalha com assistência financeira para servidores, realizamos
+        empréstimos com ótimas taxas e regularizamos taxas de juros de empréstimos já existentes,
+        além de comprar dividas de bancos somos grupo RIZOMA.
+        Quer saber mais? Responda OK!🤗<br><br>Caso não tenha interesse, peço desculpas, mas não marque como span, pois preciso deste
+número para trabalhar.🙏</p>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-icone.png"
+      />
+    </div>
+    <script>
+      function enviaZap(elemento) {
+        var texto = elemento.firstElementChild.innerText;
+        var numero = prompt("Qual é o numero?");
+        var zaplink = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+        window.open(zaplink);
+      }
+    </script>
+  </body>
+</html>
